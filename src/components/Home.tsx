@@ -76,13 +76,15 @@ const Home: React.FC = () => {
                     rotateZ={-10}
                     className="w-full mt-4"
                   >
-                    <Image
-                      src={image}
-                      height={1000}
-                      width={1000}
-                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                      alt="Uploaded image"
-                    />
+                    <div className="relative h-60 w-full">
+                      <Image
+                        src={image}
+                        layout="fill"
+                        objectFit="contain"
+                        className="rounded-xl group-hover/card:shadow-xl"
+                        alt="Uploaded image"
+                      />
+                    </div>
                   </CardItem>
                 </CardBody>
               </CardContainer>
